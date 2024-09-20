@@ -1,0 +1,596 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+
+html,
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+header {
+    position: fixed;
+    background: #191f22;
+    width: 100%;
+    color: #fff;
+    z-index: 5;
+}
+nav {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 2vw;
+  font-weight: 900;
+  letter-spacing: 0.2vw;
+  text-shadow: 1px 1px 1px;
+  animation: sidein 1s linear 0s 1 alternate;
+  color: #fff;
+}
+
+.nav-menu {
+  height: 12vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  animation: sidein 5s linear 0s 1 alternate;
+}
+
+.nav-menu a {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 8vw;
+  height: 6vh;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1.2vw;
+  font-weight: 400;
+  letter-spacing: 0.2vw;
+  text-shadow: 1px 1px 1px #000;
+  margin: 1vw;
+  color: #fff;
+  box-shadow: 1px 1px 2px 1px gray;
+}
+
+.menubtn,
+.closebtn {
+  display: none;
+  font-size: 1.6rem;
+  border: none;
+  font-weight: 700;
+  color: #fff;
+}
+
+@keyframes sidein {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0px;
+  }
+}
+
+.nav-menu a:hover {
+  animation: rotate 1s linear 0s 2 alternate;
+}
+
+@keyframes rotate {
+  from {
+    transform: skew(0deg);
+    box-shadow: 1px 1px 1px 3px lightslategray;
+    filter: drop-shadow(1px 1px 2rem #fff);
+    border: none;
+    border-radius: 8px;
+  }
+
+  to {
+    transform: rotate(5deg);
+    box-shadow: 1px 1px 1px 3px #fff;
+    filter: drop-shadow(1px 1px 2rem rgb(252, 177, 177));
+    border: none;
+    border-radius: 8px;
+  }
+}
+
+#hero {
+  overflow: hidden;
+  width: 1428px;
+  margin: 0 auto;
+  height: 100vh;
+  position: relative;
+  top: 50px;
+  z-index: -1;
+}
+
+.slide {
+  float: left;
+  height: 710px;
+  width: 1428px;
+}
+
+.slide-wrapper {
+  width: calc(1428px * 3);
+  animation: slide 15s ease infinite;
+}
+
+.slide:nth-child(1) {
+  background-image: url('https://khatazen.in/assets/uploads/media-uploader/141590862778.jpg'); /* Replace with your hero image */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.slide:nth-child(2) {
+  background-image: url("https://khatazen.in/assets/uploads/media-uploader/101590862774.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.slide:nth-child(3) {
+  background-image: url("https://khatazen.in/assets/uploads/media-uploader/021595836812.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+@keyframes slide {
+  20% {
+      margin-left: 0px;
+  }
+  40% {
+      margin-left: calc(-1428px*1);
+  }
+  60% {
+    margin-left: calc(-1428px*2);
+}
+}
+
+
+.slide h1{
+  color: rgb(8, 72, 90);
+  font-size: 55px;
+  width: 40%;
+}
+
+
+@keyframes slidetext {
+    0%{
+        left: -40%;
+    }
+    100%{
+        left: 5%;
+    }
+}
+.main-section {
+    display: none;
+    padding: 2rem;
+}
+
+.main-section h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.form {
+  display: none;
+}
+
+.form.active {
+  display: block;
+}
+#register-section, #login-section
+{
+  height: 800px;
+  background: linear-gradient(135deg, #71b7e6, #9b59b6);
+}
+
+#button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  margin-bottom: -45px;
+  margin-top: 85px;
+}
+
+#button-container button {
+  margin: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  background-color: rgb(228, 222, 222);
+}
+
+#button-container .btn.active {
+  background-color: rgb(187, 187, 15);
+  color: black;
+}
+
+#button-container .btn.completed {
+  background-color: green;
+  color: white;
+}
+hr {
+  width: 250px;
+  height: 1px;
+}
+.hr{
+  width: 100%;
+  margin: auto;
+  height: 0px;
+  margin-top: 60px;
+  margin-bottom: -20px;
+  border-color: #8a8e94;
+  
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.content{
+  /* background-color: rgb(233, 229, 229); */
+  background-image: url("https://mariongrandvincent.github.io/HTML-Personal-website/img-codePen/bg.jpg");
+  width: 35%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 40px;
+  box-shadow: 8px 8px 5px rgb(78, 76, 76);
+  border-radius: 15px;
+  color: white;
+  display: flex;
+  
+  flex-direction: column;
+  
+}
+.content2
+{
+  margin-top: 150px;
+}
+input::placeholder {
+  font-size: 15px;
+  color: white;
+}
+
+.form-title {
+  padding: 10px 40px 0px;
+}
+form {
+  padding: 0px 40px;
+}
+input {
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid rgb(233, 225, 225);
+  outline: none;
+  width: 100%;
+  margin: 20px 0;
+  padding: 2px 0;
+  background: transparent;
+  color: white !important;
+}
+
+.btns {
+  margin-left: -145px;
+}
+.form .down-btn,
+.Login-form .down-btn {
+  cursor: pointer;
+  position: relative;
+  left: 35%;
+  top: 20px;
+  width: 150px;
+  color: #fff;
+  padding: 15px 25px;
+  border-radius: 15px;
+  background-color: #1d6eac;
+  box-shadow: 2px 19px 31px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+input:-webkit-autofill {transition: background-color 5000s ease-in-out 0s;
+color: white
+}
+
+
+.hidden {
+  display: none;
+}
+
+.phone,
+.Paswd {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.Paswd input {
+  width: 48%;
+}
+.phone input {
+  border: none;
+  border-bottom: 1px solid rgb(222, 217, 217);
+  outline: none;
+  margin: 8px 0px;
+  padding: 5px 0;
+  width: 47%;
+  color: white;
+}
+.phone2{
+  display: flex;
+  gap: 1.2rem;
+}
+#number{
+  width: 70%;
+}
+#otp{
+  width: 70%;
+}
+#resend-btn{
+  cursor: pointer;
+}
+
+.phone2 button {
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 18px;
+}
+
+.phone button.active {
+  display: none;
+}
+#timer {
+  font-size: 15px;
+  color: white;
+  margin-left: 5px;
+}
+a{
+  color: rgb(232, 157, 16);
+}
+
+#otp-section {
+  display: none;
+}
+.clickbtn{
+  text-align: center;
+  margin-top: 50px;
+}
+/* #verify-btn{
+  margin-left: 18px;
+} */
+
+#otp-section.active {
+  display: block;
+}
+.categories {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-inline: auto;
+    padding: 35px;
+    margin-left: -35px;
+    margin-top: -50px;
+  }
+.category-card{
+    transition: 0.2s;
+    width: 240px;
+    height: 288px;
+    box-shadow: 4px 4px 4px rgb(224, 219, 219);
+    z-index: 2;
+    margin-top: -50px;
+    background-image: url("https://st.depositphotos.com/3098147/4361/v/450/depositphotos_43619021-stock-illustration-global-technology-mesh-digital-network.jpg");
+    background-position: center;
+    border-radius: 10px;
+  }
+  .category-card img{
+    width: 150px;
+    margin-left: 40px;
+    margin-top: 20px;
+    height: 150px;
+  }
+  .category-card:hover{
+    box-shadow: 4px 10px 10px rgb(184, 188, 184);
+    cursor: pointer;
+  }
+
+
+
+  #home-section{
+    background: linear-gradient(135deg, #71b7e6, #9b59b6);
+  }
+
+.banner-image
+{
+  background-image: url("./banner.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;    
+  height: 600px;
+  width: 88%;
+  margin: 40px auto;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.banner-image-top-p
+{
+    width: 20%;
+    font-size: 60px;
+    color: rgb(61, 50, 50);
+    margin-left: 80px;
+    font-family: 'airbnb-bold';
+}
+
+.banner-image-bottom-p
+{
+    font-size: 60px;
+    color: #222222;
+    margin-left: 80px;
+    margin-top: -50px;
+    font-family: 'airbnb-bold';
+}
+
+.banner p
+{
+    margin-top: -70px;
+}
+
+.banner button
+{
+    padding: 12px 30px;
+    margin-left: 80px;
+    margin-top: -20px;
+    font-family: 'airbnb-bold';
+    font-size: 16px;
+    background-color: rgb(229, 225, 225);
+    cursor: pointer;
+    border: 0;
+    border-radius: 7px;
+}
+
+  /* Footer */
+
+  footer {
+    background-color: #121315;
+    color: #a7a7a7;
+    font-size: 16px;
+  }
+  footer * {
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+  }
+  .row {
+    padding: 1em 1em;
+  }
+  .row.primary {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 2fr;
+    align-items: stretch;
+  }
+  .column {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 2em;
+    min-height: 15em;
+  }
+  .column h3 {
+    width: 100%;
+    text-align: left;
+    color: rgb(210, 194, 194);
+    font-size: 1em;
+    white-space: nowrap;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  li:not(:first-child) {
+    margin-top: 0.8em;
+  }
+  ul li a {
+    color: #a7a7a7;
+    text-decoration: none;
+  }
+  ul li a:hover {
+    color: #2a8ded;
+  }
+  .about p {
+    text-align: justify;
+    line-height: 1.5;
+    margin: 0;
+  }
+  footer input
+  {
+    color: black;
+  }
+  footer input,
+  footer button {
+    font-size: 1em;
+    padding: 1em;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  footer button {
+    background-color: #c7940a;
+    color: #ffffff;
+    cursor: pointer;
+  }
+  div.social {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.4em;
+    flex-direction: row;
+    margin-top: 0.5em;
+  }
+  .social i {
+    color: #bac6d9;
+  }
+  
+  .copyright {
+    padding: 0.3em 1em;
+    background-color: #25262e;
+  }
+  .footer-inp input{
+    background-color: white;
+  }
+  .copyright p {
+    font-size: 0.9em;
+    text-align: right;
+  }
+  @media screen and (max-width: 850px) {
+    .row.primary {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+
+  /*********Logo******/
+  .logo-holder h3, .logo-holder p{
+    margin:0px;
+    padding:0px;
+  }
+  .logo-holder{
+    text-align:center;
+    margin-bottom:50px ;
+  }
+  .logo-4 h3 {
+    color: #e74c3c;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 0.65;
+    font-family: 'Lobster', cursive;
+  }
+  .logo-4 p {
+    font-size: 14px;
+    margin-left: 50px;
+    color: #eee3e3;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-style: italic;
+    font-family: 'Mansalva', cursive;
+  }
+  

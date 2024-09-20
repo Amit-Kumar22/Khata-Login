@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <div class="logo"><img src="./logo.png" alt=""  height="55px" width="180px" /></div>
+          <div class="nav-menu">
+            <a href="#" id="home">Home</a>
+            <a href="#" id="about">About</a>
+            <a href="#" id="login">Login</a>
+            <a href="#" id="register">Register</a>
+          </div>
+          <span class="menubtn" onclick="openMenu()">&#9776</span>
+          <span class="closebtn" onclick="closeMenu()"><i class="fa-solid fa-x"></i></span>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="slide-wrapper">
+          <div class="slide">
+            <h1 class="title">The ultimate GST software for textiles</h1>
+          </div>
+          <div class="slide">
+            <h1 class="title">The ultimate GST software for textiles</h1>
+          </div>
+          <div class="slide">
+            <h1 class="title">The ultimate GST software for textiles</h1>
+          </div>
+      </div>
+    </section>
+
+    <main id="main-content">
+        <section id="home-section" class="main-section">
+            <div class="categories">
+              <div class="category-card">
+
+              </div>
+              <div class="category-card">
+
+              </div>
+              <div class="category-card">
+
+              </div>
+              <div class="category-card">
+
+              </div>
+            </div>
+
+            <div class="banner">
+              <div class="banner-image">
+                  <p class="banner-image-top-p">Questions about hosting?</p>
+              </div>
+          </div>
+        </section>
+
+        <section id="login-section" class="main-section">
+            <div class="content content2">
+                <form class="Login-form">
+                  <div class="logo-holder logo-4">
+                    <h3>KhataPlus</h3>
+                    <p>Khata+ Pvt Ltd</p>
+                </div>
+                  <h2>Login-Page</h2>
+                  <input
+                    type="email"
+                    id="eemail"
+                    placeholder="Email"
+                    name="email"
+                    required
+                  />
+                    <input
+                      type="password"
+                      id="password1"
+                      placeholder="Password"
+                      name="password"
+                      required
+                    />
+                  <br />
+                  <button class="down-btn" type="button">Login</button>
+                  <hr class="hr"/>
+                  <p class="clickbtn">New User Click on <a href="#" id="register2">Register</a> Button</p>
+                </form>
+              </div>
+        </section>
+
+        <section id="register-section" class="main-section">
+            <div id="button-container">
+                <button type="button" id="btn1" class="btn" onclick="goToPage(1)">1</button>
+                <hr />
+                <button type="button" id="btn2" class="btn" onclick="goToPage(2)">2</button>
+                <hr />
+                <button type="button" id="btn3" class="btn" onclick="goToPage(3)">3</button>
+              </div>
+              <form action="Amit.php" method="POST" class="content">
+                <div id="form1" class="form">
+                  <div class="logo-holder logo-4">
+                    <h3>KhataPlus</h3>
+                    <p>Khata+ Pvt Ltd</p>
+                </div>
+                  <h2>Register</h2>
+                  <input
+                    type="text"
+                    id="username"
+                    placeholder="UserId"
+                    name="email"
+                    required
+                  />
+        
+                  <div class="phone">
+                    <input
+                      type="password"
+                      id="password"
+                      placeholder="Password"
+                      name="password"
+                      required
+                    />
+                    <input
+                      type="password"
+                      id="comfpswd"
+                      placeholder="Confirm-Password"
+                      name="comfpswd"
+                      required
+                    />
+                  </div>
+                  <br />
+        
+                  <div class="phone2">
+                    <div class="mobile-sec">
+                    <input
+                      type="tel"
+                      id="number"
+                      placeholder="Number"
+                      name="number"
+                      required
+                    />
+                    <button type="button" id="verify-btn">Verify</button>
+                  </div>
+        
+                    <div id="otp-section" class="otp-section">
+                      <input type="text" id="otp" placeholder="Enter OTP" />
+                      <div id="msgg">OTP Valid for<span id="timer"> 40 </span> sec.</div>
+                      <button type="button" id="verify-otp-btn" onclick="VerifyOtp()">Verify OTP</button>
+                      <div id="resend-btn" class="hidden">Resend</div>
+                    </div>
+                  </div>
+                  <br />
+                  <button class="down-btn" type="submit" onclick="goToPage(2)">Next</button>
+                  <hr class="hr"/>
+                  <p class="clickbtn">If you have Already Account Click on <a href="#" id="login2">Login</a> Button</p>
+                </div>
+        
+                <div id="form2" class="form">
+                  <h2>Address Information</h2>
+                  <label for="address">Address:</label>
+                  <input type="text" id="address" name="address" required />
+                  <label for="city">City:</label>
+                  <input type="text" id="city" name="city" required />
+                  <label for="state">State:</label>
+                  <input type="text" id="state" name="state" required />
+                  <label for="zip">Zip Code:</label>
+                  <input type="text" id="zip" name="zip" required />
+                  <div class="btns">
+                    <button type="button" class="down-btn" onclick="goToPage(1)"> Prev</button>
+                    <button type="button" class="down-btn" onclick="goToPage(3)">Next</button>
+                  </div>
+                </div>
+        
+                <div id="form3" class="form">
+                  <h2>Payment Information</h2>
+                  <label for="card-number">Card Number:</label>
+                  <input type="text" id="card-number" name="card-number" required />
+                  <label for="expiration">Expiration Date:</label>
+                  <input type="text" id="expiration" name="expiration" required />
+                  <label for="cvv">CVV:</label>
+                  <input type="text" id="cvv" name="cvv" required />
+                  <div class="btns">
+                    <button type="button" class="down-btn" onclick="goToPage(2)">Prev</button>
+                    <button class="down-btn" type="submit">Submit</button>
+                    </button>
+                  </div>
+              </div>
+            </form>
+        </section>
+
+        <footer>
+          <div class="row primary">
+            <div class="column about">
+              <h3>KhataPlus Pvt Ltd</h3>
+              <p>
+                Access Data backup and recoveryData security and encryptionCustomizable
+                reports and analyticsWe are a team of passionate and experienced professionals
+                 who aim to provide innovative and affordable solutions for your textile
+                  business needs.
+              </p>
+              <div class="social">
+                <i class="fa-brands fa-facebook-square"></i>
+                <i class="fa-brands fa-instagram-square"></i>
+                <i class="fa-brands fa-twitter-square"></i>
+                <i class="fa-brands fa-youtube-square"></i>
+                <i class="fa-brands fa-whatsapp-square"></i>
+              </div>
+            </div>
+        
+            <div class="column links">
+              <h3>Term & Condition</h3>
+              <ul>
+                <li>
+                  <a href="#">F.A.Q</a>
+                </li>
+                <li>
+                  <a href="#">Cookies Policy</a>
+                </li>
+                <li>
+                  <a href="#f">Terms Of Service</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </div>
+        
+            <div class="column links">
+              <h3>Contact info</h3>
+              <ul>
+                <li>
+                  <a href="#faq">Call</a>
+                </li>
+                <li>
+                  <a href="#">Email</a>
+                </li>
+                <li>
+                  <a href="#">Support</a>
+                </li>
+              </ul>
+            </div>
+        
+            <div class="column subscribe">
+              <h3>Newsletter</h3>
+              <div class="footer-inp">
+                <input type="email" placeholder="Your email id here" />
+                <button>Subscribe</button>
+              </div>
+        
+            </div>
+        
+          </div>
+        
+          <div class="row copyright">
+            <p>Copyright &copy; 2024 KhataPlus Pvt Ltd</p>
+          </div>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <!-- <script src="script2.js"></script> -->
+</body>
+</html>
